@@ -52,13 +52,13 @@ export default function List() {
           <div>
             <div
               className="bg-secondary bg-opacity-10 px-4 py-5 rounded"
-              style={{ borderTop: `2px solid ${currentList.color}` }}
+              style={{ borderTop: `3px solid ${currentList.color}` }}
             >
               <div className="d-flex justify-content-between align-items-baseline">
                 <h1 className="mb-4">{currentList.title}</h1>
                 <span>
                   <i
-                    className="bi bi-pencil-square text-black cursor-pointer"
+                    className="bi bi-pencil-square text-secondary cursor-pointer"
                     onClick={() => {
                       setModuleEditState(true);
                       setListEditedTitle(currentList.title);
@@ -112,7 +112,7 @@ export default function List() {
                       </span>
                       <span className="me-3">
                         <i
-                          className="bi bi-trash3-fill cursor-pointer"
+                          className="bi bi-trash3-fill text-secondary cursor-pointer"
                           onClick={() => {
                             handleRemoveItem(item);
                           }}
@@ -149,7 +149,8 @@ export default function List() {
                 <input
                   type="text"
                   placeholder="New list name..."
-                  className="form-control "
+                  className="form-control shadow-none"
+                  style={{ fontSize: "0.93rem", border: "1px solid #dee2e6" }}
                   value={listEditedTitle}
                   onChange={(event) => setListEditedTitle(event.target.value)}
                 />

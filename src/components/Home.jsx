@@ -35,7 +35,7 @@ export default function Home() {
               <div
                 key={list.id}
                 className="col-12 mb-3 bg-secondary bg-opacity-10 px-4 py-3 rounded shadow-sm"
-                style={{ borderTop: `2px solid ${list.color}` }}
+                style={{ borderTop: `3px solid ${list.color}` }}
               >
                 <Link to={`/list/${list.id}`} className="text-decoration-none">
                   <h3 className="mb-1 text-dark">
@@ -57,7 +57,7 @@ export default function Home() {
                   <div>
                     <span>
                       <i
-                        className="bi bi-trash3-fill text-black cursor-pointer"
+                        className="bi bi-trash3-fill text-secondary cursor-pointer"
                         onClick={() => {
                           handleRemoveList(list.id);
                         }}
